@@ -1,0 +1,65 @@
+[
+  {
+    "model": "catalog.category",
+    "pk": 17,
+    "fields": {
+      "name": "Смартфоны",
+      "description": "Средство связи"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 18,
+    "fields": {
+      "name": "Телевизоры",
+      "description": "Просмотр телепередач"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 19,
+    "fields": {
+      "name": "Пылесосы",
+      "description": "Уборка в доме"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "name": "Samsung Galaxy S23 Ultra",
+      "description": "Мощная аппаратная начинка",
+      "photo": "",
+      "category": 17,
+      "price": null,
+      "created_at": null,
+      "updated_at": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "name": "LG",
+      "description": "Относительно демократичный ценник",
+      "photo": "",
+      "category": 18,
+      "price": null,
+      "created_at": null,
+      "updated_at": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+      "name": "Karcher",
+      "description": "Надежная система фильтрации",
+      "photo": "",
+      "category": 19,
+      "price": null,
+      "created_at": null,
+      "updated_at": null
+    }
+  }
+]
