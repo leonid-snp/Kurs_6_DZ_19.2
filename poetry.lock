@@ -133,6 +133,43 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-stubs"
+version = "5.0.0"
+description = "Mypy stubs for Django"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "django_stubs-5.0.0-py3-none-any.whl", hash = "sha256:084484cbe16a6d388e80ec687e46f529d67a232f3befaf55c936b3b476be289d"},
+    {file = "django_stubs-5.0.0.tar.gz", hash = "sha256:b8a792bee526d6cab31e197cb414ee7fa218abd931a50948c66a80b3a2548621"},
+]
+
+[package.dependencies]
+asgiref = "*"
+django = "*"
+django-stubs-ext = ">=5.0.0"
+types-PyYAML = "*"
+typing-extensions = "*"
+
+[package.extras]
+compatible-mypy = ["mypy (>=1.10.0,<1.11.0)"]
+redis = ["redis"]
+
+[[package]]
+name = "django-stubs-ext"
+version = "5.0.0"
+description = "Monkey-patching and extensions for django-stubs"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "django_stubs_ext-5.0.0-py3-none-any.whl", hash = "sha256:8e1334fdf0c8bff87e25d593b33d4247487338aaed943037826244ff788b56a8"},
+    {file = "django_stubs_ext-5.0.0.tar.gz", hash = "sha256:5bacfbb498a206d5938454222b843d81da79ea8b6fcd1a59003f529e775bc115"},
+]
+
+[package.dependencies]
+django = "*"
+typing-extensions = "*"
+
+[[package]]
 name = "executing"
 version = "2.0.1"
 description = "Get the currently executing AST node of a frame, and other information"
@@ -576,6 +613,17 @@ docs = ["myst-parser", "pydata-sphinx-theme", "sphinx"]
 test = ["argcomplete (>=3.0.3)", "mypy (>=1.7.0)", "pre-commit", "pytest (>=7.0,<8.2)", "pytest-mock", "pytest-mypy-testing"]
 
 [[package]]
+name = "types-pyyaml"
+version = "6.0.12.20240311"
+description = "Typing stubs for PyYAML"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "types-PyYAML-6.0.12.20240311.tar.gz", hash = "sha256:a9e0f0f88dc835739b0c1ca51ee90d04ca2a897a71af79de9aec5f38cb0a5342"},
+    {file = "types_PyYAML-6.0.12.20240311-py3-none-any.whl", hash = "sha256:b845b06a1c7e54b8e5b4c683043de0d9caf205e7434b3edc678ff2411979b8f6"},
+]
+
+[[package]]
 name = "typing-extensions"
 version = "4.11.0"
 description = "Backported and Experimental Type Hints for Python 3.8+"
@@ -611,4 +659,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "407d38d60eb3ec90767f261d6f727a4247660a673c05abb14183db72d7ec6b15"
+content-hash = "32cb8fb60dd6321a33f5c9dbcbffac942f34e032575adf10985e48e2ab1a7083"

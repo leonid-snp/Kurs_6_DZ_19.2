@@ -1,7 +1,7 @@
 [
   {
     "model": "catalog.category",
-    "pk": 17,
+    "pk": 140,
     "fields": {
       "name": "Смартфоны",
       "description": "Средство связи"
@@ -9,7 +9,7 @@
   },
   {
     "model": "catalog.category",
-    "pk": 18,
+    "pk": 141,
     "fields": {
       "name": "Телевизоры",
       "description": "Просмотр телепередач"
@@ -17,7 +17,7 @@
   },
   {
     "model": "catalog.category",
-    "pk": 19,
+    "pk": 142,
     "fields": {
       "name": "Пылесосы",
       "description": "Уборка в доме"
@@ -25,12 +25,12 @@
   },
   {
     "model": "catalog.product",
-    "pk": 3,
+    "pk": 27,
     "fields": {
       "name": "Samsung Galaxy S23 Ultra",
       "description": "Мощная аппаратная начинка",
       "photo": "",
-      "category": 17,
+      "category": 140,
       "price": null,
       "created_at": null,
       "updated_at": null
@@ -38,12 +38,12 @@
   },
   {
     "model": "catalog.product",
-    "pk": 4,
+    "pk": 28,
     "fields": {
       "name": "LG",
       "description": "Относительно демократичный ценник",
       "photo": "",
-      "category": 18,
+      "category": 141,
       "price": null,
       "created_at": null,
       "updated_at": null
@@ -51,12 +51,12 @@
   },
   {
     "model": "catalog.product",
-    "pk": 5,
+    "pk": 29,
     "fields": {
       "name": "Karcher",
       "description": "Надежная система фильтрации",
       "photo": "",
-      "category": 19,
+      "category": 142,
       "price": null,
       "created_at": null,
       "updated_at": null
