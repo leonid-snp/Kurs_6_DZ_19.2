@@ -5,7 +5,7 @@
 </div>
 
 <div class="container">
-    <div class="col-6">
+    <div class="col-6 mx-auto">
         <div class="card text-center">
             <div class="card-body">
                 <form method="post" action="" class="form-floating">
@@ -23,7 +23,7 @@
                         <input class="form-control" type="file" id="formFile">
                     </div>
                     <div class="mb-3">
-                        <select class="form-select" aria-label="Пример выбора по умолчанию">
+                          <select class="form-select" aria-label="Пример выбора по умолчанию">
                             <option selected>Выберите категорию</option>
                             <option value="1">{{ object_list.0 }}</option>
                             <option value="2">{{ object_list.1 }}</option>
@@ -37,12 +37,12 @@
                         <span class="input-group-text">.00</span>
                     </div>
                     <div class="mb-3">
-                        <label for="date">Дата создания: </label>
-                        <input type="date" name="date" id="date">
+                        <input type="text" name="created_at" class="form-control" id="created_at"
+                               placeholder="Введите дату создания">
                     </div>
                     <div class="mb-3">
-                        <label for="date2">Дата изменения: </label>
-                        <input type="date" name="date" id="date2">
+                        <input type="text" name="updated_at" class="form-control" id="updated_at"
+                               placeholder="Введите дату изменения">
                     </div>
                     <button type="submit" class="btn btn-primary">Добавить</button>
                 </form>

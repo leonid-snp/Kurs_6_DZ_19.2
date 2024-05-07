@@ -4,7 +4,6 @@
     <h1 class="display-4">Каталог</h1>
     <p class="lead">Каталог - магазин по продажи электротехники</p>
 </div>
-
 <div class="container">
     <div class="row text-center">
         {% for object in object_list %}
@@ -20,21 +19,6 @@
             </div>
         </div>
         {% endfor %}
-    </div>
-    <div class="container">
-        <div class="row text-center">
-            <div class="mb-3 mt-5">
-                <div class="btn-toolbar mb-3" role="toolbar" aria-label="Панель инструментов с группами кнопок">
-                    <div class="btn-group me-2" role="group" aria-label="Первая группа">
-                        <a type="button" class="btn btn-outline-secondary" href="{% url 'catalog:home' %}">1</a>
-                        <a type="button" class="btn btn-outline-secondary" href="{% url 'catalog:home_2' %}">2</a>
-                    </div>
-                    <div class="mb-2 mt-2">
-                        <label class="form-label">Страница</label>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 {% endblock %}
