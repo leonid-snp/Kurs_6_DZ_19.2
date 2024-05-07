@@ -13,7 +13,7 @@
                 <div class="card-body">
                     <h4 class="card-title">{{ object }}</h4>
                     <p class="card-text">
-                        {{ object.description }}
+                        {{ object.description|slice:100  }}
                     </p>
                     <a href="{% url 'catalog:detail_product' object.pk %}" class="btn btn-primary">Посмотреть</a>
                 </div>
