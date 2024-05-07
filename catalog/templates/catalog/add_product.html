@@ -8,50 +8,41 @@
     <div class="col-6">
         <div class="card text-center">
             <div class="card-body">
-                <form>
+                <form method="post" action="" class="form-floating">
+                    {% csrf_token %}
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Название</label>
-                        <input class="form-control" id="exampleFormControlInput1"
+                        <input type="text" name="name" class="form-control" id="name"
                                placeholder="Введите название продукта">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput2" class="form-label">Описание</label>
-                        <textarea class="form-control" id="exampleFormControlInput2"
+                        <textarea name="description" class="form-control" id="description"
                                   placeholder="Введите описание продукта"></textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Загрузите фото продукта</label>
+                        <label for="formFile" class="form-label">Фото</label>
                         <input class="form-control" type="file" id="formFile">
                     </div>
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Выберите категорию</label>
                         <select class="form-select" aria-label="Пример выбора по умолчанию">
-                            <option selected>Список доступных категорий</option>
+                            <option selected>Выберите категорию</option>
                             <option value="1">{{ object_list.0 }}</option>
                             <option value="2">{{ object_list.1 }}</option>
                             <option value="3">{{ object_list.2 }}</option>
                         </select>
                     </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput3" class="form-label">Цена</label>
-                        <input class="form-control" id="exampleFormControlInput3"
-                        placeholder="Введите цену продукта">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">₽</span>
+                        <input type="text" name="price" class="form-control" id="price"
+                               placeholder="Введите цену продукта" aria-label="Amount (to the nearest ruble)">
+                        <span class="input-group-text">.00</span>
                     </div>
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Дата создания</label>
-                        <input class="form-control" list="datalistOptions" id="exampleDataList"
-                               placeholder="Введите дату создания">
-                        <datalist id="datalistOptions">
-                            <option value="{% now 'Y-M-d' %}">
-                        </datalist>
+                        <label for="date">Дата создания: </label>
+                        <input type="date" name="date" id="date">
                     </div>
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Дата изменения</label>
-                        <input class="form-control" list="datalistOptions1" id="exampleDataList1"
-                               placeholder="Введите дату изменения">
-                        <datalist id="datalistOptions1">
-                            <option value="{% now 'Y-M-d' %}">
-                        </datalist>
+                        <label for="date2">Дата изменения: </label>
+                        <input type="date" name="date" id="date2">
                     </div>
                     <button type="submit" class="btn btn-primary">Добавить</button>
                 </form>
