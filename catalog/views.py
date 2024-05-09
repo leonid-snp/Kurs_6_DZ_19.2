@@ -4,13 +4,9 @@ from catalog.models import Product, Contact, Category
 
 
 def home(request):
-    product_list = Product.objects.all()
-    latest_five_products = product_list[len(product_list) - 5 :]
     context = {
-        "object_list": latest_five_products,
         "title": 'Главная страница'
     }
-    print(latest_five_products)
     return render(request, "catalog/home.html", context)
 
 
@@ -47,8 +43,9 @@ def add_product(request):
     if request.method == "POST":
         name = request.POST.get("name")
         description = request.POST.get("description")
-        photo = request.POST.get("photo")
-        category = request.POST.get("category")
+        photo = request.FILES.get("photo")
+        category_id = request.POST.get("category")
+        category = Category.objects.get(id=category_id)
         price = request.POST.get("price")
         created_at = request.POST.get("created_at")
         updated_at = request.POST.get("updated_at")
@@ -62,7 +59,7 @@ def add_product(request):
             created_at=created_at,
             updated_at=updated_at
         )
-        print(name, description, photo, category, price, created_at, updated_at)
+
     context = {
         'object_list': category_list,
         'title': 'Добавить продукт'
@@ -70,12 +67,23 @@ def add_product(request):
     return render(request, 'catalog/add_product.html', context)
 
 
-def home_2(request):
+def home_1(request):
     product_list = Product.objects.all()
-    latest_five_products = product_list[len(product_list) - 5 :]
+    latest_five_products = product_list[:4]
     context = {
         "object_list": latest_five_products,
-        "title": 'Вторая страница'
+        "title": 'Каталог'
+    }
+    print(latest_five_products)
+    return render(request, "catalog/home_2.html", context)
+
+
+def home_2(request):
+    product_list = Product.objects.all()
+    latest_five_products = product_list[4:]
+    context = {
+        "object_list": latest_five_products,
+        "title": 'Каталог'
     }
     print(latest_five_products)
     return render(request, "catalog/home_2.html", context)
