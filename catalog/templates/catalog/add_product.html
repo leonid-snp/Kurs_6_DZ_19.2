@@ -20,14 +20,14 @@
                     </div>
                     <div class="mb-3">
                         <label for="formFile" class="form-label">Фото</label>
-                        <input class="form-control" type="file" id="formFile">
+                        <input class="form-control" type="file" id="formFile" name="photo">
                     </div>
                     <div class="mb-3">
-                          <select class="form-select" aria-label="Пример выбора по умолчанию">
+                          <select class="form-select" name="category" aria-label="Пример выбора по умолчанию">
                             <option selected>Выберите категорию</option>
-                            <option value="1">{{ object_list.0 }}</option>
-                            <option value="2">{{ object_list.1 }}</option>
-                            <option value="3">{{ object_list.2 }}</option>
+                              {% for category in object_list %}
+                              <option value="{{ category.id }}">{{ category.name }}</option>
+                              {% endfor %}
                         </select>
                     </div>
                     <div class="input-group mb-3">
